@@ -17,7 +17,7 @@ class Header extends Component {
      componentDidMount(){
          fetch("https://jsonplaceholder.typicode.com/users")
          .then(response=>response.json())
-         .then(issue=>console.log(issue))
+         .then(issue=>this.setState({monster:issue}))
      }
     render() { 
         return ( 
