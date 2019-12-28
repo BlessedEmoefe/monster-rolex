@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Header from "./Header"
 import Body from './Body';
+import CardList from './components/card-list/CardList';
 
 ReactDOM.render(<Header />, document.getElementById('root'));
 

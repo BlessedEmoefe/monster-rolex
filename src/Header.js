@@ -1,18 +1,9 @@
 import React,{Component} from "react"
+import CardList from "./components/card-list/CardList.jsx"
 
 class Header extends Component {
     state = { 
-   monster:[
-       {name:"blessed",
-        id:1},
-       {name:"Emoefe",
-       id:2},
-       {name:"junior",
-       id:3},
-       {name:"havard",
-       id:4}
-
-   ]
+   monster:[]
      }
      componentDidMount(){
          fetch("https://jsonplaceholder.typicode.com/users")
@@ -21,8 +12,8 @@ class Header extends Component {
      }
     render() { 
         return ( 
-            <div><h3>thi is</h3>
-                {this.state.monster.map(individual=><h2 key={this.state.monster.id}>{individual.name}</h2>)}
+            <div>
+                <CardList monster={this.state.monster} />
             </div>
          );
     }
