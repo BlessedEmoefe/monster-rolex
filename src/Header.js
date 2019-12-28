@@ -1,5 +1,6 @@
 import React,{Component} from "react"
 import CardList from "./components/card-list/CardList.jsx"
+import "./header.style.css"
 
 class Header extends Component {
     state = { 
@@ -12,7 +13,7 @@ class Header extends Component {
      }
     render() { 
         return ( 
-            <div>
+            <div className="header">
                 <CardList monster={this.state.monster} />
             </div>
          );
