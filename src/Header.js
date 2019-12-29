@@ -4,7 +4,8 @@ import "./header.style.css"
 
 class Header extends Component {
     state = { 
-   monster:[]
+   monster:[],
+   searchfield:''
      }
      componentDidMount(){
          fetch("https://jsonplaceholder.typicode.com/users")
@@ -14,6 +15,7 @@ class Header extends Component {
     render() { 
         return ( 
             <div className="header">
+                <input type="search" placeholder="search monsters" onChange={e=>console.log(e.target.value)}/>
                 <CardList monster={this.state.monster} />
             </div>
          );
