@@ -15,7 +15,8 @@ class Header extends Component {
     render() { 
         return ( 
             <div className="header">
-                <input type="search" placeholder="search monsters" onChange={e=>console.log(e.target.value)}/>
+                <input type="search" placeholder="search monsters" onChange={e=>{this.setState({searchfield:e.target.value},()=>console.log(this.state))
+                    }}/>
                 <CardList monster={this.state.monster} />
             </div>
          );
