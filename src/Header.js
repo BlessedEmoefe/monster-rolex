@@ -24,6 +24,7 @@ handleChange = e => {
         
         return ( 
             <div className="header">
+                <h1>MOnsters Rolodex</h1>
                <SearchBox
                placeholder="search monster"
                handleChange={this.handleChange} />

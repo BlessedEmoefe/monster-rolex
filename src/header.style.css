@@ -1,5 +1,13 @@
 .header{
     width:80%;
     margin:0 auto;
-    padding:0 10% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1{
+    font-family:"Bigelow Rules" ;
+    font-size:72px ;
+    color:#0ccAc4;
 }
