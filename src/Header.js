@@ -13,10 +13,13 @@ class Header extends Component {
          .then(issue=>this.setState({monster:issue}))
      }
     render() { 
+        const { monster,searchfield } = this.state
+        const FieldMonster = monster.filter(individual => individual.name.toLowerCase().includes(searchfield.toLowerCase())) 
+        
         return ( 
             <div className="header">
                 <input type="search" placeholder="search monsters" onChange={e=>this.setState({searchfield:e.target.value})}/>
-                <CardList monster={this.state.monster} />
+                <CardList monster={FieldMonster} />
             </div>
          );
     }
